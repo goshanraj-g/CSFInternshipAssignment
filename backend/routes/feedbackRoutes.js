@@ -10,7 +10,7 @@ router.post("/", async (req, res) => {
     await feedback.save(); // save to MongoDB
     res.status(201).json({ id: feedback._id }); // return the new id
   } catch (err) {
-    res.status(400).json({ error: err.message });
+    res.status(400).json({ error: err.message }); // simple error handling
   }
 });
 
@@ -23,7 +23,7 @@ router.get("/:id", async (req, res) => {
     }
     res.json(feedback); // send feedback back to browser
   } catch (err) {
-    res.status(500).json({ error: err.message });
+    res.status(500).json({ error: err.message }); // simple error handling
   }
 });
 

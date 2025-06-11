@@ -4,9 +4,9 @@ import axios from "axios";
 import "./FeedbackForm.css";
 
 const FeedbackForm = () => {
+  // states for make, and models and for the form
   const [makes, setMakes] = useState([]);
   const [models, setModels] = useState([]);
-
   const [form, setForm] = useState({
     make: "",
     model: "",
@@ -15,6 +15,7 @@ const FeedbackForm = () => {
     comment: "",
   });
 
+  // hook to fetch all the makes and set them
   useEffect(() => {
     const fetchMakes = async () => {
       const data = await getAllMakes();
@@ -23,6 +24,7 @@ const FeedbackForm = () => {
     fetchMakes();
   }, []);
 
+  // hook to fetch all moels and set them whenever make component is modified
   useEffect(() => {
     if (!form.make) return;
     const fetchModels = async () => {
@@ -36,6 +38,7 @@ const FeedbackForm = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
+  // when 'submitted', make a POST call and use state hook to update the form and add it to the reviews
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -44,6 +47,7 @@ const FeedbackForm = () => {
       setForm({ make: "", model: "", rating: 5, comment: "" });
       setModels([]);
     } catch (err) {
+      // basic error handling
       alert("error submitting feedback");
     }
   };
@@ -133,6 +137,7 @@ const FeedbackForm = () => {
         {form.make && form.model && form.year && (
           <div style={{ marginTop: "1rem" }}>
             <h3>View Car Image</h3>
+            {/* simple image search for the picture of the vehicle */}
             <a
               href={`https://www.google.com/search?tbm=isch&q=${form.year}+${form.make}+${form.model}`}
               target="_blank"

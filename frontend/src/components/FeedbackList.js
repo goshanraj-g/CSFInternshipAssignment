@@ -3,19 +3,22 @@ import axios from "axios";
 import "./FeedbackList.css";
 
 const FeedbackList = () => {
+  // hook to update feedback
   const [feedbacks, setFeedbacks] = useState([]);
 
   useEffect(() => {
     const fetchFeedbacks = async () => {
       try {
-        // NOTE: use http, not https
+        // get call to get all the feedback
         const res = await axios.get("http://localhost:5000/api/feedback");
         setFeedbacks(res.data);
       } catch (err) {
+        // simple error handling
         console.error("Error fetching feedback:", err);
       }
     };
     fetchFeedbacks();
+    // load once everything is mounted
   }, []);
 
   return (

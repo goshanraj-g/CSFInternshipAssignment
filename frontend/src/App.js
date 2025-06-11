@@ -4,10 +4,6 @@
  *
  * Structure:
  *  - Renders a page container with centered layout 
- *  - Displays the page title: "Vehicle Feedback"
- *  - Includes:
- *      • <FeedbackForm /> – for submitting new vehicle feedback
- *      • <FeedbackList /> – for displaying all submitted feedback
  *
  * Styling:
  *  - Inline styles used for layout (max width, margin, font family)

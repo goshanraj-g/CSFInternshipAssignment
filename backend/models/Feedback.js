@@ -1,3 +1,18 @@
+/**
+ * @file Feedback.js
+ * @description Mongoose model for vehicle feedback submissions
+ *
+ * Fields:
+ *  - make:    Car manufacturer (e.g., "Toyota", "Porsche")
+ *  - model:   Car model (e.g., "Camry", "GT3RS")
+ *  - year:    Year of manufacture (e.g., 2024)
+ *  - rating:  Integer between 1–5 representing user satisfaction
+ *  - comment: Text-based user feedback about the vehicle
+ *
+ * The schema includes automatic timestamps (createdAt, updatedAt)
+ * This model is used in the REST API to create and retrieve survey data
+ */
+
 // import mongoose for MongoDB
 const mongoose = require("mongoose");
 

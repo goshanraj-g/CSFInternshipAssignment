@@ -1,3 +1,23 @@
+/**
+ * @file FeedbackForm.jsx
+ * @description React component for submitting vehicle feedback
+ *
+ * Features:
+ *  - Fetches car makes from the NHTSA API and filters to the most popular ones (the cars seen on modern roads)
+ *  - Dynamically loads models based on selected make
+ *  - Allows user to select year, give a 1-5 rating, and leave a comment
+ *  - Submits the form to the backend (MongoDB via Express API)
+ *  - Displays a Google Image Search link to preview the selected vehicle
+ *
+ * Hooks:
+ *  - useEffect: to fetch makes on mount and models on make change
+ *  - useState: for form state, makes list, models list
+ *
+ * Dependencies:
+ *  - axios: for HTTP requests
+ *  - getAllMakes / getModelsForMake: utility functions in api/nhtsa.js
+ */
+
 import React, { useEffect, useState } from "react";
 import { getAllMakes, getModelsForMake } from "../api/nhtsa";
 import axios from "axios";

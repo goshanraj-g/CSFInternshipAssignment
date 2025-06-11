@@ -1,7 +1,21 @@
+/**
+ * @file App.jsx
+ * @description Root component for the Carma web app
+ *
+ * Structure:
+ *  - Renders a page container with centered layout 
+ *  - Displays the page title: "Vehicle Feedback"
+ *  - Includes:
+ *      • <FeedbackForm /> – for submitting new vehicle feedback
+ *      • <FeedbackList /> – for displaying all submitted feedback
+ *
+ * Styling:
+ *  - Inline styles used for layout (max width, margin, font family)
+ */
+
 import React from "react";
 import FeedbackForm from "./components/FeedbackForm";
 import FeedbackList from "./components/FeedbackList";
-
 
 function App() {
   return (
@@ -12,7 +26,7 @@ function App() {
         fontFamily: "sans-serif",
       }}
     >
-      <h1>Vehicle Feedback</h1>
+      <h1 style={{ textAlign: "center", marginBottom: "1rem" }}>🚗 Carma 🚗</h1>
       <FeedbackForm />
       <hr />
       <FeedbackList />

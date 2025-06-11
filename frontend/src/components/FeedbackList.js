@@ -1,3 +1,25 @@
+/**
+ * @file FeedbackList.jsx
+ * @description React component that displays a list of all submitted vehicle feedback
+ *
+ * Features:
+ *  - Fetches all feedback entries from the backend API on component mount
+ *  - Displays each feedback as a styled card with:
+ *      - Make, model, year
+ *      - Star-based visual rating (★)
+ *      - User comment
+ *      - Submission timestamp
+ *  - Gracefully handles the empty state (no feedback yet)
+ *
+ * Hooks:
+ *  - useState: for storing feedback list
+ *  - useEffect: for fetching data once when mounted
+ *
+ * Dependencies:
+ *  - axios: for API call
+ *  - CSS file: FeedbackList.css for styling feedback cards
+ */
+
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./FeedbackList.css";

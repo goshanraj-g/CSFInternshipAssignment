@@ -1,3 +1,17 @@
+/**
+ * @file feedback.js
+ * @description Express route handlers for the Carma vehicle feedback API
+ *
+ * Provides the following RESTful endpoints:
+ *
+ *  POST   /api/v1/surveys      → Submit a new feedback form
+ *  GET    /api/v1/surveys/:id  → Fetch a single feedback entry by its MongoDB ID
+ *  GET    /api/v1/surveys      → Fetch all feedback entries, sorted by most recent
+ *
+ * All data is stored in MongoDB using the Feedback Mongoose model
+ * Each entry includes vehicle make, model, year, rating (1–5), and a user comment on the vehicle
+ */
+
 // initialize express, import feedback model
 const express = require("express");
 const router = express.Router();

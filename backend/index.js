@@ -1,3 +1,15 @@
+/**
+ * @file server.js
+ * @description Entry point for the Carma backend API
+ *
+ * Responsibilities:
+ *  - Loads environment variables
+ *  - Connects to MongoDB via Mongoose
+ *  - Sets up middleware: CORS and JSON parsing
+ *  - Mounts the feedback API routes at /api/feedback
+ *  - Starts the Express server on the specified port
+ */
+
 // import express, mongoose and CORS
 const express = require("express");
 const mongoose = require("mongoose");

@@ -1,3 +1,16 @@
+/**
+ * @file nhtsa.js
+ * @description Utility functions for fetching vehicle data from the NHTSA Vehicle API
+ *
+ * Exports:
+ *  - getAllMakes:    Fetches all car makes, filters to popular ones, and sorts alphabetically
+ *  - getModelsForMake: Given a make name (e.g. "Toyota"), fetches its list of models
+ *
+ * Uses:
+ *  - Public API: https://vpic.nhtsa.dot.gov/api/
+ *  - Popular makes list is hardcoded and used to filter results
+ */
+
 import axios from "axios";
 
 const BASE_URL = "https://vpic.nhtsa.dot.gov/api/vehicles";

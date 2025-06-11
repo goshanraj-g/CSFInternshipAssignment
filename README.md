@@ -1,5 +1,7 @@
 # 🚗 Carma - Crowdsourced Car Feedback Application
-![Logo](frontend/public/carmalogo.png)
+<p align="center">
+  <img src="frontend/public/carmalogo.png" alt="Carma Logo" width="120" style="border-radius: 50%;" />
+</p>
 
 **Carma** is a full-stack web app where users can look up car makes an dmodels using the [NHTSA Vehicle API](https://vpic.nhtsa.dot.gov/api/) and submit their own
 personal review about vehicles. This application is built with the **MERN** stack and designed to meet all requirements of the Canadian Sheep Federation Internship Assignment

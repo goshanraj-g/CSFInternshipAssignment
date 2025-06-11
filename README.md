@@ -4,12 +4,12 @@
   <img src="frontend/public/carmalogo.png" alt="Carma Logo" width="120" style="border-radius: 50%;" />
 </p>
 
-**Carma** is a full-stack web app where users can look up car makes an dmodels using the [NHTSA Vehicle API](https://vpic.nhtsa.dot.gov/api/) and submit their own
+**Carma** is a full-stack web app where users can look up car makes and models using the [NHTSA Vehicle API](https://vpic.nhtsa.dot.gov/api/) and submit their own
 personal review about vehicles. This application is built with the **MERN** stack and designed to meet all requirements of the Canadian Sheep Federation Internship Assignment
 
 ---
 
-## 📸 Preview
+## Preview
 
 ### Feedback Form
 
@@ -21,7 +21,7 @@ personal review about vehicles. This application is built with the **MERN** stac
 
 ---
 
-## ✅ Features
+## Features
 
 ### API Functionality (Back-End)
 
@@ -47,7 +47,7 @@ personal review about vehicles. This application is built with the **MERN** stac
 
 ---
 
-## 📁 Technologies Used
+## Technologies Used
 
 - **Frontend**: React, Axios, TailwindCSS (or basic CSS)
 - **Backend**: Express, Node.js, Mongoose
@@ -97,7 +97,7 @@ personal review about vehicles. This application is built with the **MERN** stac
   - Add domain name (carma.ca/carma.app) and link the frontend + backend with the same subdomain
   - Enable HTTPS with automatic SSL
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Clone the project
 
@@ -134,7 +134,7 @@ npm install
 # Visit http://localhost:3000
 ```
 
-## 🧪 Example cURL Requests
+## Example cURL Requests
 
 ### Create feedback
 
@@ -161,3 +161,5 @@ curl http://localhost:5000/api/feedback
 ```bash
 curl http://localhost:5000/api/feedback/<id>
 ```
+
+---

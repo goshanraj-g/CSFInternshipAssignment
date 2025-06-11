@@ -1,4 +1,5 @@
 # 🚗 Carma - Crowdsourced Car Feedback Application
+
 <p align="center">
   <img src="frontend/public/carmalogo.png" alt="Carma Logo" width="120" style="border-radius: 50%;" />
 </p>
@@ -54,6 +55,35 @@ personal review about vehicles. This application is built with the **MERN** stac
 - **Public API**: [NHTSA Vehicle API](https://vpic.nhtsa.dot.gov/api/)
 
 ---
+
+# How Can the Application and API be Extended and Improved?
+
+- User Authentication
+  - Adding login support with Google OAuth would allow it so individuals can manage their own feedback, and possibly avoid spam.
+  - Allow users to view their personal feedback history, edit it, delete it
+- Enhanced Filtering and Browsing
+  - Add filters and search functionalities for vehicles
+  - Add Make / Model / Year / Rating filters
+  - Allow full-text search on comments
+  - Sort by highest-rated, most reviewed, etc...
+- Pagination
+  - Load feedback entries 10 at a time to improve website performance and reduce frontend load time
+- Ratings Aggregations/Visuals
+  - Display aggregated data such as average rating per model/year or number of reviews that were submitted
+- Image Integration
+  - Instead of just linking a Google Images Link, I could implement an auto-fetching car API or even use Unsplash API or Car Imagery API
+  - Show a live thumbnail preview in the splashcard as users adding feedback to ensure they are reviewing the right car
+- Responsive UI
+  - I could have improved the mobile interface by optimizing font sizes, and using mobile-friendly dropdowns
+- Improved Input Validation
+  - Possibly validate incoming request bodies using a library like express-validator
+- Rate Limiting & Bot Prevention
+  - Prevent abuse/spam using reCAPTCHA, or express-rate-limit
+  - Could implement it so theres a limit of 5 submissions per minute per IP
+
+# How Can the Application and API be Deployed?
+
+-
 
 ## 🚀 Getting Started
 

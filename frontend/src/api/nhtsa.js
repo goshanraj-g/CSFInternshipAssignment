@@ -1,0 +1,61 @@
+import axios from "axios";
+
+const BASE_URL = "https://vpic.nhtsa.dot.gov/api/vehicles";
+
+const POPULAR_MAKES = [
+  "acura",
+  "audi",
+  "aston martin",
+  "bentley",
+  "bmw",
+  "bugatti",
+  "cadillac",
+  "chevrolet",
+  "dodge",
+  "ferrari",
+  "ford",
+  "honda",
+  "hyundai",
+  "jeep",
+  "kia",
+  "koenigsegg",
+  "lamborghini",
+  "lexus",
+  "mazda",
+  "mclaren",
+  "mercedes-benz",
+  "nissan",
+  "pagani",
+  "porsche",
+  "rolls-royce",
+  "subaru",
+  "tesla",
+  "toyota",
+  "volkswagen",
+]; // alphabetical order
+
+// fetch all car makes
+export const getAllMakes = async () => {
+  try {
+    const res = await axios.get(`${BASE_URL}/GetAllMakes?format=json`);
+    return res.data.Results.filter((make) =>
+      POPULAR_MAKES.includes(make.Make_Name.toLowerCase())
+    ).sort((a, b) => a.Make_Name.localeCompare(b.Make_Name)); // sort final list alphabetically
+  } catch (err) {
+    console.error("error fetching makes from NHTSA:", err);
+    return [];
+  }
+};
+
+// this fetchesa models for a specific make from the previous fetch
+export const getModelsForMake = async (makeName) => {
+  try {
+    const res = await axios.get(
+      `${BASE_URL}/GetModelsForMake/${makeName}?format=json`
+    );
+    return res.data.Results; // array of model id, and model name
+  } catch (err) {
+    console.error("error fetching models:", err);
+    return [];
+  }
+};

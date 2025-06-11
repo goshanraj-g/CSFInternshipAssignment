@@ -1,15 +1,14 @@
 /**
- * @file feedback.js
+ * @file feedbackRoutes.js
  * @description Express route handlers for the Carma vehicle feedback API
  *
- * Provides the following RESTful endpoints:
+ * Provides the following RESTful endpoints (mounted under /api/feedback):
  *
- *  POST   /api/v1/surveys      → Submit a new feedback form
- *  GET    /api/v1/surveys/:id  → Fetch a single feedback entry by its MongoDB ID
- *  GET    /api/v1/surveys      → Fetch all feedback entries, sorted by most recent
+ *  POST   /api/feedback       -> Submit a new feedback form
+ *  GET    /api/feedback/:id   -> Fetch a single feedback entry by ID
+ *  GET    /api/feedback       -> Fetch all feedback entries
  *
- * All data is stored in MongoDB using the Feedback Mongoose model
- * Each entry includes vehicle make, model, year, rating (1–5), and a user comment on the vehicle
+ * All feedback is stored in MongoDB using the Feedback model
  */
 
 // initialize express, import feedback model

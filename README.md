@@ -83,7 +83,19 @@ personal review about vehicles. This application is built with the **MERN** stac
 
 # How Can the Application and API be Deployed?
 
--
+- Backend Deployment
+  - The Express API can be reployed on Render or Railway
+  - The environmental variables have to be set securely on the dashboard
+  - Example: `https://carma-api.onrender.com/api/feedback`
+- Frontend Deployment
+  - Host the React app with Vercel, GitHub Pages or Netlify
+  - This could be automatically built and deployed from GitHub using CI/CD
+- Database Hosting
+  - MongoDB Atlas could be utilized to host a secure, scalable cloud database
+  - Can be securely connected with a connection string in the backend .env
+- Other Future Improvements with Deployment
+  - Add domain name (carma.ca/carma.app) and link the frontend + backend with the same subdomain
+  - Enable HTTPS with automatic SSL
 
 ## 🚀 Getting Started
 
